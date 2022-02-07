@@ -74,7 +74,7 @@ public class Player implements Runnable {
                 } else if (master.currentGame == null) {
                     sendMessageToClient("Invalid command. For more information use 'HELP' command.");
                 }
-            } catch (IOException e) {
+            } catch (IOException | NullPointerException e) {
                 disconnectPlayer();
             }
         }

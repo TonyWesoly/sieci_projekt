@@ -19,17 +19,41 @@ public final class QuestionBank {
 
     public static ArrayList<Question> generateList() {
         ArrayList<Question> questions = new ArrayList<>();
-        Random random = new Random();
-        for (int i = 0; i < databaseQuestions; i++) {
-            String randomAnswer;
-            if(random.nextBoolean()) {
-                randomAnswer = "YES";
-            } else {
-                randomAnswer = "NO";
-            }
-            Question question = new Question(i, "The content of the question.", randomAnswer);
-            questions.add(question);
-        }
+        Question question;
+        int questionId = 0;
+//        Random random = new Random();
+//        for (int i = 0; i < databaseQuestions; i++) {
+//            String randomAnswer;
+//            if(random.nextBoolean()) {
+//                randomAnswer = "YES";
+//            } else {
+//                randomAnswer = "NO";
+//            }
+//            Question question = new Question(i, "The content of the question.", randomAnswer);
+//            questions.add(question);
+//        }
+        question = new Question(questionId++,"2 + 2 = 5", "NO");
+        questions.add(question);
+        question = new Question(questionId++,"2 - 15 = -13", "YES");
+        questions.add(question);
+        question = new Question(questionId++,"16 - 15 = -1", "NO");
+        questions.add(question);
+        question = new Question(questionId++,"4 + 0 = 5", "NO");
+        questions.add(question);
+        question = new Question(questionId++,"14 + 2 = 16", "YES");
+        questions.add(question);
+        question = new Question(questionId++,"4 * 8 = 32", "YES");
+        questions.add(question);
+        question = new Question(questionId++,"11 * 12 = 132", "YES");
+        questions.add(question);
+        question = new Question(questionId++,"13 * 5 = 64", "NO");
+        questions.add(question);
+        question = new Question(questionId++,"9 * 9 = 80", "NO");
+        questions.add(question);
+        question = new Question(questionId++,"4 + 3 = 6", "NO");
+        questions.add(question);
+        question = new Question(questionId,"4 + 5 = 9", "YES");
+        questions.add(question);
         return questions;
     }
 
